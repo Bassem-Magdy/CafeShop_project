@@ -1,447 +1,441 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>CAFE SHOP</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/all.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafe Shop | Specialty Coffee, Roasted Fresh &amp; Delivered</title>
+  <meta name="description" content="Cafe Shop roasts small-batch specialty coffee and delivers it fresh to your door. Explore espresso, lattes, cold brew and signature blends.">
+  <meta name="theme-color" content="#2b1a12">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cafe Shop | Specialty Coffee, Roasted Fresh">
+  <meta property="og:description" content="Small-batch specialty coffee, roasted fresh and delivered to your door.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&h=630&q=80">
+  <meta property="og:url" content="https://bassem-magdy.github.io/CafeShop_project/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (inline SVG, no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <div class="home">
-    <div class="home_page">
-      <img src="images/cafe.png" alt="Not found" class="img1">
-      <input type="text" class="search" placeholder="Search...">
-      <i class="fa-solid fa-magnifying-glass icon1"></i>
-      <ul class="list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Prices</a></li>
-        <li><a href="#">Team</a></li>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <li class="dropdown">
-          <a href="#">Blog</a>
-          <ul class="list1">
-            <li><a href="#" class="a-list1">Scents History</a></li>
-            <li><a href="#" class="a-list1">Ingredients</a></li>
-            <li><a href="#" class="a-list1">Order</a></li>
-          </ul>
-        </li>
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#home" aria-label="Cafe Shop, home">
+        <svg class="logo__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 2v2M12 2v2"/></svg>
+        <span>Cafe<b>Shop</b></span>
+      </a>
 
-        <li><a href="#">Contact Us</a></li>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#menu">Menu</a></li>
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#pricing">Pricing</a></li>
+          <li><a class="nav__link" href="#team">Team</a></li>
+          <li><a class="nav__link" href="#journal">Journal</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="#pricing">Order Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero__bg" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=2000&q=80"
+           alt="A freshly poured latte beside scattered roasted coffee beans" fetchpriority="high">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="eyebrow eyebrow--light">Small-batch specialty coffee</p>
+        <h1 class="hero__title" id="hero-title">Coffee worth slowing down for.</h1>
+        <p class="hero__text">
+          Ethically sourced beans, roasted in small batches and delivered to your door within days of roasting.
+          Espresso, cappuccino or filter: every cup is crafted for flavor and freshness.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#pricing">Get Started</a>
+          <a class="btn btn--ghost" href="#about">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT / WELCOME ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Welcome</p>
+          <h2 class="section__title" id="about-title">Made for people who love a good cup</h2>
+          <p class="section__lead">We believe great coffee is personal. Choose your roast, your grind and your rhythm, and we'll take care of the rest.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="card card--feature">
+            <span class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 2v2M12 2v2"/></svg>
+            </span>
+            <h3 class="card__title">Roasted to Order</h3>
+            <p class="card__text">Rich, aromatic notes of cocoa and toasted nut, roasted the week you order so every cup tastes alive.</p>
+            <a class="link-arrow" href="#menu">Read more <span aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="card card--feature">
+            <span class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21l9-9"/><path d="M14 6l1-3 1 3 3 1-3 1-1 3-1-3-3-1z"/><path d="M18 14l.6-1.6L20 12l-1.4-.4L18 10l-.6 1.6L16 12l1.4.4z"/></svg>
+            </span>
+            <h3 class="card__title">Fully Customizable</h3>
+            <p class="card__text">Pick the roast level, grind size and delivery schedule that suits your brewing method and your mornings.</p>
+            <a class="link-arrow" href="#pricing">Read more <span aria-hidden="true">&rarr;</span></a>
+          </article>
+          <article class="card card--feature">
+            <span class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            </span>
+            <h3 class="card__title">Order in Seconds</h3>
+            <p class="card__text">A simple, mobile-friendly checkout with flexible subscriptions. Pause, skip or change anytime.</p>
+            <a class="link-arrow" href="#contact">Read more <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU / FEATURED (filterable) ============ -->
+    <section class="section section--alt" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Our Menu</p>
+          <h2 class="section__title" id="menu-title">Featured Roasts &amp; Brews</h2>
+          <p class="section__lead">A rotating selection from our roastery, from bold espresso to bright, refreshing cold brew.</p>
+        </header>
+
+        <div class="filter" role="group" aria-label="Filter menu by category">
+          <button class="filter__btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter__btn" type="button" data-filter="hot" aria-pressed="false">Hot</button>
+          <button class="filter__btn" type="button" data-filter="cold" aria-pressed="false">Cold</button>
+          <button class="filter__btn" type="button" data-filter="beans" aria-pressed="false">Beans</button>
+        </div>
+
+        <ul class="grid grid--3 gallery" id="gallery">
+          <li class="gallery__item" data-category="hot">
+            <figure class="media-card">
+              <div class="media-card__img">
+                <img loading="lazy" width="600" height="450" src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=800&h=600&q=80" alt="Double espresso shot with golden crema in a white cup">
+              </div>
+              <figcaption class="media-card__body"><span class="tag">Hot</span><h3>Classic Espresso</h3></figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item" data-category="hot">
+            <figure class="media-card">
+              <div class="media-card__img">
+                <img loading="lazy" width="600" height="450" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&h=600&q=80" alt="Vanilla latte topped with detailed latte art">
+              </div>
+              <figcaption class="media-card__body"><span class="tag">Hot</span><h3>Vanilla Latte</h3></figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item" data-category="hot">
+            <figure class="media-card">
+              <div class="media-card__img">
+                <img loading="lazy" width="600" height="450" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&h=600&q=80" alt="Creamy cappuccino served in a ceramic cup on a wooden table">
+              </div>
+              <figcaption class="media-card__body"><span class="tag">Hot</span><h3>Velvet Cappuccino</h3></figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item" data-category="cold">
+            <figure class="media-card">
+              <div class="media-card__img">
+                <img loading="lazy" width="600" height="450" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&h=600&q=80" alt="Iced coffee with milk swirling in a tall glass">
+              </div>
+              <figcaption class="media-card__body"><span class="tag">Cold</span><h3>Slow-Steeped Cold Brew</h3></figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item" data-category="hot">
+            <figure class="media-card">
+              <div class="media-card__img">
+                <img loading="lazy" width="600" height="450" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&h=600&q=80" alt="Pour-over filter coffee brewing into a glass carafe">
+              </div>
+              <figcaption class="media-card__body"><span class="tag">Hot</span><h3>Single-Origin Pour Over</h3></figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item" data-category="beans">
+            <figure class="media-card">
+              <div class="media-card__img">
+                <img loading="lazy" width="600" height="450" src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=800&h=600&q=80" alt="Dark roasted coffee beans spilling from a burlap sack">
+              </div>
+              <figcaption class="media-card__body"><span class="tag">Beans</span><h3>House Roasted Beans</h3></figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">What We Offer</p>
+          <h2 class="section__title" id="services-title">Everything a coffee lover needs</h2>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="card card--service">
+            <span class="icon-badge icon-badge--sm" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span>
+            <h3 class="card__title">Worldwide Coffee Selection</h3>
+            <p class="card__text">Beans from Ethiopia, Colombia, Brazil and beyond, each traceable to the farm that grew it.</p>
+          </article>
+          <article class="card card--service">
+            <span class="icon-badge icon-badge--sm" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7 7 .8-5.3 4.8 1.6 7.4L12 18.3 5.7 22l1.6-7.4L2 9.8 9 9z"/></svg></span>
+            <h3 class="card__title">Rare Micro-Lots</h3>
+            <p class="card__text">Limited releases of exceptional coffees, selected for those who appreciate elegance in every cup.</p>
+          </article>
+          <article class="card card--service">
+            <span class="icon-badge icon-badge--sm" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></span>
+            <h3 class="card__title">Effortless Shopping</h3>
+            <p class="card__text">Clear product pages, honest tasting notes and a checkout that takes less time than brewing.</p>
+          </article>
+          <article class="card card--service">
+            <span class="icon-badge icon-badge--sm" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <h3 class="card__title">Expert Brewing Advice</h3>
+            <p class="card__text">Chat with our baristas for grind, ratio and equipment tips tailored to your setup.</p>
+          </article>
+          <article class="card card--service">
+            <span class="icon-badge icon-badge--sm" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+            <h3 class="card__title">Fast, Fresh Delivery</h3>
+            <p class="card__text">Roasted, sealed and shipped in days, so your beans arrive at peak flavor.</p>
+          </article>
+          <article class="card card--service">
+            <span class="icon-badge icon-badge--sm" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4"/><path d="M12 8v13M19 12v9H5v-9"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span>
+            <h3 class="card__title">Coffee Gift Boxes</h3>
+            <p class="card__text">Beautifully packaged gift sets for birthdays, holidays and every coffee-loving friend.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US + STATS ============ -->
+    <section class="section section--dark" id="why-us" aria-labelledby="why-title">
+      <div class="container">
+        <div class="split">
+          <div class="split__text">
+            <p class="eyebrow eyebrow--light">Why Choose Us</p>
+            <h2 class="section__title section__title--light" id="why-title">Passion in every roast</h2>
+            <p class="split__lead">
+              We started Cafe Shop with a simple belief: exceptional coffee should be easy to find and a joy to drink.
+              Every batch is roasted with care by people who love what they do.
+            </p>
+            <ul class="checklist">
+              <li>Unique, rich blends for every taste</li>
+              <li>Ethically sourced, fairly traded beans</li>
+              <li>Roasted fresh and shipped within 48 hours</li>
+              <li>Recyclable, planet-friendly packaging</li>
+            </ul>
+          </div>
+          <div class="split__media">
+            <img loading="lazy" width="800" height="600" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&h=750&q=80" alt="Warm, inviting cafe interior with wooden tables and a barista counter">
+          </div>
+        </div>
+
+        <dl class="stats">
+          <div class="stats__item"><dt>Happy Clients</dt><dd><span data-count="451" data-suffix="K">451K</span></dd></div>
+          <div class="stats__item"><dt>Awards Won</dt><dd><span data-count="20">20</span></dd></div>
+          <div class="stats__item"><dt>Cups Served</dt><dd><span data-count="154" data-suffix="K">154K</span></dd></div>
+          <div class="stats__item"><dt>Signature Blends</dt><dd><span data-count="54">54</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Pricing</p>
+          <h2 class="section__title" id="pricing-title">Simple, honest prices</h2>
+          <p class="section__lead">No hidden fees. Pick your favorite and have it at your door.</p>
+        </header>
+
+        <div class="grid grid--3 pricing">
+          <article class="price-card">
+            <h3 class="price-card__name">French Roast</h3>
+            <p class="price-card__price"><span class="price-card__amount">$15</span><span class="price-card__unit">/250ml</span></p>
+            <ul class="price-card__list">
+              <li>Rich and bold flavor</li>
+              <li>Warm, energizing aroma</li>
+              <li>Freshly roasted, nature-inspired</li>
+            </ul>
+            <a class="btn btn--outline" href="#contact">Purchase Now</a>
+          </article>
+
+          <article class="price-card price-card--featured">
+            <span class="price-card__badge">Most Popular</span>
+            <h3 class="price-card__name">Vanilla Latte</h3>
+            <p class="price-card__price"><span class="price-card__amount">$20</span><span class="price-card__unit">/300ml</span></p>
+            <ul class="price-card__list">
+              <li>Timeless, creamy flavor</li>
+              <li>Classic coffee warmth</li>
+              <li>Soft, elegant aroma that lifts your mood</li>
+            </ul>
+            <a class="btn btn--primary" href="#contact">Purchase Now</a>
+          </article>
+
+          <article class="price-card">
+            <h3 class="price-card__name">Caramel Macchiato</h3>
+            <p class="price-card__price"><span class="price-card__amount">$40</span><span class="price-card__unit">/250ml</span></p>
+            <ul class="price-card__list">
+              <li>20% off + a free pastry</li>
+              <li>Warm and comforting aroma</li>
+              <li>Perfect for cozy afternoons</li>
+            </ul>
+            <a class="btn btn--outline" href="#contact">Purchase Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="section section--alt" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Our Team</p>
+          <h2 class="section__title" id="team-title">The people behind the cup</h2>
+          <p class="section__lead">A small team of designers, developers and coffee obsessives who care about every detail.</p>
+        </header>
+
+        <div class="grid grid--4">
+          <article class="team-card">
+            <span class="avatar" aria-hidden="true">BM</span>
+            <h3 class="team-card__name">Bassem Magdy</h3>
+            <p class="team-card__role">Front-End Developer</p>
+            <p class="team-card__bio">Turns designs into fast, accessible experiences, and always has a flat white nearby.</p>
+          </article>
+          <article class="team-card">
+            <span class="avatar" aria-hidden="true">AM</span>
+            <h3 class="team-card__name">Ahmed Mahmoud</h3>
+            <p class="team-card__role">Content Creator</p>
+            <p class="team-card__bio">Tells the story behind every roast, from the farm to your morning cup.</p>
+          </article>
+          <article class="team-card">
+            <span class="avatar" aria-hidden="true">HS</span>
+            <h3 class="team-card__name">Hossam</h3>
+            <p class="team-card__role">Full-Stack Developer</p>
+            <p class="team-card__bio">Keeps ordering, payments and deliveries running smoothly behind the scenes.</p>
+          </article>
+          <article class="team-card">
+            <span class="avatar" aria-hidden="true">AH</span>
+            <h3 class="team-card__name">Ahmed</h3>
+            <p class="team-card__role">Marketing Lead</p>
+            <p class="team-card__bio">Builds campaigns and community so more people discover great coffee.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNAL / BLOG ============ -->
+    <section class="section" id="journal" aria-labelledby="journal-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Recent News</p>
+          <h2 class="section__title" id="journal-title">From the Cafe Shop journal</h2>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="post">
+            <div class="post__img">
+              <img loading="lazy" width="600" height="400" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&h=533&q=80" alt="Barista carefully pouring hot water over ground coffee">
+            </div>
+            <div class="post__body">
+              <p class="post__meta"><span>By Ahmed</span> <span aria-hidden="true">&middot;</span> <time datetime="2026-12-13">13 Dec</time></p>
+              <h3 class="post__title">Marketing Manager's Guide to Brand Stories</h3>
+              <p class="post__text">How thoughtful storytelling turns a great product into a brand people love, and why every roast has a story worth sharing.</p>
+              <a class="link-arrow" href="#journal">Read more <span class="visually-hidden">about brand stories</span><span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="post">
+            <div class="post__img">
+              <img loading="lazy" width="600" height="400" src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&h=533&q=80" alt="Cup of coffee on a saucer beside an open notebook">
+            </div>
+            <div class="post__body">
+              <p class="post__meta"><span>By Mariam</span> <span aria-hidden="true">&middot;</span> <time datetime="2026-12-13">13 Dec</time></p>
+              <h3 class="post__title">Inside the Roastery with Our Coffee Specialist</h3>
+              <p class="post__text">A look at how we build blends, from sample roasting and cupping sessions to the final flavor profile.</p>
+              <a class="link-arrow" href="#journal">Read more <span class="visually-hidden">about the roastery</span><span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+          <article class="post">
+            <div class="post__img">
+              <img loading="lazy" width="600" height="400" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&h=533&q=80" alt="Espresso being extracted into a small cup from a machine">
+            </div>
+            <div class="post__body">
+              <p class="post__meta"><span>By Mohamed</span> <span aria-hidden="true">&middot;</span> <time datetime="2026-12-13">13 Dec</time></p>
+              <h3 class="post__title">Finding Your Perfect Brew</h3>
+              <p class="post__text">Four years of helping customers choose their ideal roast, and the simple questions that lead to the right cup.</p>
+              <a class="link-arrow" href="#journal">Read more <span class="visually-hidden">about finding your brew</span><span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / CTA ============ -->
+    <section class="section section--cta" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact__text">
+          <p class="eyebrow eyebrow--light">Contact Us</p>
+          <h2 class="section__title section__title--light" id="contact-title">Let's brew something together</h2>
+          <p class="split__lead">Questions about an order, a wholesale enquiry or just want coffee advice? Send us a note and we'll reply within one business day.</p>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="form__row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="form__row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form__row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit">Send Message</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="year">2026</span> Cafe Shop. All rights reserved.</p>
+      <ul class="social" aria-label="Social media">
+        <li><a class="social__link" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.5-3.3h-3.2V8.6c0-.9.4-1.7 1.8-1.7h1.5V4.1S15.5 3.9 14.4 3.9c-2.6 0-4.2 1.6-4.2 4.4v2.4H7.5V14h2.7v8z"/></svg></a></li>
+        <li><a class="social__link" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></li>
+        <li><a class="social__link" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM10 9.5h3.8v1.6c.6-1 1.9-1.9 3.8-1.9 4 0 4.4 2.6 4.4 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21h-4z"/></svg></a></li>
+        <li><a class="social__link" href="#" aria-label="Twitter / X"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3l-6.6 7.5L22 21h-6l-4.7-6.1L5.9 21h-3l7-8L2 3h6.2l4.2 5.6zm-1 16.2h1.7L7.3 4.7H5.5z"/></svg></a></li>
       </ul>
     </div>
-    <br>
-    <div class="welcome">
-      <p class="p1">we are creative agency</p>
-      <br>
-      <p class="p2">Discover premium coffee delivered straight to your door. From carefully selected beans to unique
-        blends, every cup is crafted </p>
-      <br>
-      <p class="p3">for flavor and freshness. Enjoy espresso, cappuccino, or filter coffee anytime, anywhere.</p>
-      <br>
-      <button class="btn btn1">Learn More!</button>
-      <button class="btn btn2">Get Started!</button>
-    </div>
-  </div>
-  <div class="second_page">
-    <p class="welcome2">Welcome To Website</p>
-    <br>
-    <div class="line3"></div>
-    <br>
-    <div class="divf div1">
-      <img src="images/coffee-break (1).png" alt="Not found" class="imgc">
-      <br>
-      <p class="p10">Fully Customizible</p>
-      <br>
-      <p class="p11">Coffee with rich, aromatic notes of roasted beans Generative AI</p>
-      <br>
-      <p class="p12">Read More</p>
-    </div>
-    <div class="divf div2">
-      <img src="images/magic-wand.png" alt="Not Found" class="imgc">
-      <p class="p10">Fully Customizible</p>
-      <br>
-      <p class="p11">Coffee with warm, roasted aroma burst Generative AI</p>
-      <br>
-      <p class="p12">Read More</p>
-    </div>
-    <div class="divf div3">
-      <img src="images/smartphone.png" alt="Not Found" class="imgc">
-      <br>
-      <p class="p10">Fully Customizible</p>
-      <br>
-      <p class="p11">Coffee with rich, roasted aroma burst Generative AI</p>
-      <br>
-      <p class="p12 p312">Read More</p>
-    </div>
-  </div>
-  <div class="third_page">
-    <p class="fw">Featured Works</p>
-    <div class="line4"></div>
-    <div class="im1 comim">
-      <img src="images/coffee4.jpg" alt="Not Found" class="image1">
-      <div class="comim1 co1">
-        <p class="pp1">Category</p>
-        <br>
-        <p class="pp2">Roasted Coffee</p>
-        <br>
-        <i class="fa-regular fa-heart sec3icon2 i1"></i>
-        <i class="fa-brands fa-pinterest sec3icon3 i2"></i>
-      </div>
-    </div>
-    <div class="im2 comim">
-      <img src="images/coffee5.jpg" alt="Not Found" class="image1">
-      <div class="comim1 co2">
-        <p class="pp1">Category</p>
-        <br>
-        <p class="pp2">Roasted Coffee</p>
-        <br>
-        <i class="fa-regular fa-heart sec3icon2 i1"></i>
-        <i class="fa-brands fa-pinterest sec3icon3 i2"></i>
-      </div>
-    </div>
-    <div class="im3 comim">
-      <img src="images/coffee7.jpg" alt="Not Found" class="image1">
-      <div class="comim1 co3">
-        <p class="pp1">Category</p>
-        <br>
-        <p class="pp2">Roasted Coffee</p>
-        <br>
-        <i class="fa-regular fa-heart sec3icon2 i1"></i>
-        <i class="fa-brands fa-pinterest sec3icon3 i2"></i>
-      </div>
-    </div>
-    <br>
-    <div class="im1 comim">
-      <img src="images/coffee8.jpg" alt="Not Found" class="image1">
-      <div class="comim1 co4">
-        <p class="pp1">Category</p>
-        <br>
-        <p class="pp2">Roasted Coffee</p>
-        <br>
-        <i class="fa-regular fa-heart sec3icon2 i1"></i>
-        <i class="fa-brands fa-pinterest sec3icon3 i2"></i>
-      </div>
-    </div>
-    <div class="im2 comim">
-      <img src="images/coffee9.jpg" alt="Not Found" class="image1">
-      <div class="comim1 co5">
-        <p class="pp1">Category</p>
-        <br>
-        <p class="pp2">Roasted Coffee</p>
-        <br>
-        <i class="fa-regular fa-heart sec3icon2 i1"></i>
-        <i class="fa-brands fa-pinterest sec3icon3 i2"></i>
-      </div>
-    </div>
-    <div class="im3 comim">
-      <img src="images/coffee10.jpg" alt="Not Found" class="image1">
-      <div class="comim1 co6">
-        <p class="pp1">Category</p>
-        <br>
-        <p class="pp2">Roasted Coffee</p>
-        <br>
-        <i class="fa-regular fa-heart sec3icon2 i1"></i>
-        <i class="fa-brands fa-pinterest sec3icon3 i2"></i>
-      </div>
-    </div>
-  </div>
-  <div class="Fourth_Page">
-    <p class="wwf">What We Offer</p>
-    <div class="line4"></div>
-    <br>
-    <div class="box">
-      <img src="images/crown.png" alt="Not Found" class="tag">
-      <p class="p41">Worldwide Coffee Selection</p>
-      <br>
-      <p class="p42">Discover a wide range of premium international coffee brands for every moment.</p>
-    </div>
-    <div class="box">
-      <img src="images/magic-wand.png" alt="Not Found" class="tag">
-      <p class="p41">Unique Coffee Experience</p>
-      <br>
-      <br>
-      <p class="p42">Explore rare coffee selections designed for those who appreciate elegance in every cup.</p>
-    </div>
-    <div class="box">
-      <img src="images/add-to-cart.png" alt="Not Found" class="tag">
-      <p class="p41">Easy and Convenient Shopping Experience</p>
-
-      <p class="p42">Discover a seamless coffee experience with smart design and effortless navigation.</p>
-    </div>
-    <div class="box">
-      <img src="images/conversation.png" alt="Not Found" class="tag">
-      <p class="p41">Wide Range of International Coffees</p>
-      <br>
-      <p class="p42">Explore a diverse selection of top international coffee brands, perfect for every taste.</p>
-    </div>
-    <div class="box">
-      <img src="images/delivery.png" alt="Not Found" class="tag">
-      <p class="p41">Premium Coffee Varieties</p>
-      <br>
-      <br>
-      <p class="p42">Experience a curated collection of world-class coffee blends, ideal for any moment.</p>
-    </div>
-    <div class="box">
-      <img src="images/gift-box.png" alt="Not Found" class="tag">
-      <p class="p41">Exclusive Selection of Coffee Gifts</p>
-      <p class="p42">Explore a diverse selection of top international coffee gifts, perfect for every occasion.</p>
-    </div>
-  </div>
-  <div class="Fifth_Page">
-    <p class="p51">Why Choose Us </p>
-    <div class="line5"></div>
-    <p class="p52">i do not know what i have to say but iam so happy with that field of working hoping that it lasts
-      forevere god willing</p>
-    <div>
-      <img src="images/check.png" alt="Not Found" class="img51">
-      <span class="s51">Unique, rich coffee blends for everyone.</span>
-    </div>
-    <div class="div51">
-      <img src="images/check.png" alt="Not Found" class="img51">
-      <span class="s51">Unique, rich coffee blends for everyone.</span>
-    </div>
-    <div class="div51">
-      <img src="images/check.png" alt="Not Found" class="img51">
-      <span class="s51">Unique, rich coffee blends for everyone.</span>
-    </div>
-    <div class="div51">
-      <img src="images/check.png" alt="Not Found" class="img51">
-      <span class="s51">Unique, rich coffee blends for everyone.</span>
-    </div>
-    <img src="images/phototo5.jpg" alt="Not Found" class="img52">
-    <div class="div52 div5c"></div>
-    <div class="div53 div5c"></div>
-    <div class="div54 div5c"></div>
-  </div>
-  <!-- six_page -->
-  <div class="six_page">
-    <div class="div61 ">
-      <img src="images/group.png" alt="Not Found" class="img6 img61">
-      <p class="p61">451K</p>
-      <p class="p61">Happy Clients</p>
-    </div>
-    <div class="div62 ">
-      <img src="images/trophy.png" alt="Not Found" class="img6 img62">
-      <br>
-      <p class="p61">20</p>
-      <p class="p61">awards won</p>
-    </div>
-    <div class="div63 ">
-      <img src="images/cup-of-coffee.png" alt="Not Found" class="img6 img63">
-      <p class="p61">154K</p>
-      <p class="p61">cups of coffee</p>
-    </div>
-    <div class="div64 ">
-      <img src="images/pros-and-cons.png" alt="Not Found" class="img6 img64">
-      <p class="p61">54</p>
-      <p class="p61">projects completed</p>
-    </div>
-  </div>
-  <!-- seven page -->
-  <div class="seven_page">
-    <p class="h6">Pricing Table</p>
-    <div class="line3"></div>
-    <div class="div7">
-      <div class="div71">
-        <p class="p71">French Roast</p>
-        <div class="price">
-          <p class="price-1">$15</p>
-          <p class="price-2">/250ml</p>
-        </div>
-        <br>
-        <br>
-        <p>Rich and bold flavor</p>
-        <br>
-        <p>Warm, energizing aroma</p>
-        <br>
-        <p>Freshly roasted, nature-inspired</p>
-        <button class="btn7"><a href="#" class="a71">Purchase Now</a></button>
-      </div>
-      <div class="div71">
-        <p class="p71">Vanilla Latte</p>
-        <div class="price">
-          <p class="price-1">$20</p>
-          <p class="price-2">/300ml</p>
-        </div>
-        <br>
-        <br>
-        <p>Timeless creamy flavor</p>
-        <br>
-        <p>Classic coffee warmth</p>
-        <br>
-        <p>Soft, elegant aroma that lifts your mood</p>
-        <button class="btn7"><a href="#" class="a71">Purchase Now</a></button>
-      </div>
-      <div class="div71">
-        <p class="p71">Caramel Macchiato</p>
-        <div class="price">
-          <p class="price-1">$40</p>
-          <p class="price-2">/250ml</p>
-        </div>
-        <br>
-        <br>
-        <p>20% off + free pastry</p>
-        <br>
-        <p>Warm and comforting aroma</p>
-        <br>
-        <p>Perfect for cozy afternoons</p>
-        <button class="btn7"><a href="#" class="a71">Purchase Now</a></button>
-      </div>
-    </div>
-  </div>
-  <!-- Eight page -->
-  <div class="eight_page">
-    <div class="title8 title81">
-      <img src="images/person1.jpg" alt="Not Found" class="person8">
-      <p class="name8">Bassem Magdy</p>
-      <p class="job8">Front End</p>
-      <p class="p81">This is a paragraph in a section in this template i have to do it to be so good in html, css
-        languages</p>
-    </div>
-    <div class="title8 title82">
-      <img src="images/person2.jpg" alt="Not Found" class="person8">
-      <p class="name8">Ahmed Mahmoud</p>
-      <p class="job8">Content Creator</p>
-      <p class="p81">This is a paragraph in a section in this template i have to do it to be so good in html, css
-        languages</p>
-    </div>
-  </div>
-  <!-- nine page -->
-  <div class="nine_page">
-    <p class="h6">Our Team</p>
-    <div class="line3"></div>
-    <div class="div9">
-      <div class="div91">
-        <div class="img9">
-          <img src="images/person4.jpg" alt="Not Found" class="img91">
-          <div class="contact9">
-            <div class="ico1 ico9"> <img src="images/facebook (1).png" alt="Not Found" class="i9"></div>
-            <div class="ico2 ico9"> <img src="images/linkedin.png" alt="Not Found" class="i91"></div>
-            <div class="ico3 ico9"><img src="images/twitter.png" alt="Not Found" class="i92"></div>
-          </div>
-        </div>
-        <p class="p91">Bassem</p>
-        <p class="job91">UI/UX DESIGNER</p>
-      </div>
-      <div class="div91">
-        <div class="img9">
-          <img src="images/person5.jpg" alt="Not Found" class="img91">
-          <div class="contact9">
-            <div class="ico1 ico9"> <img src="images/facebook (1).png" alt="Not Found" class="i9"></div>
-            <div class="ico2 ico9"> <img src="images/linkedin.png" alt="Not Found" class="i91"></div>
-            <div class="ico3 ico9"><img src="images/twitter.png" alt="Not Found" class="i92"></div>
-          </div>
-        </div>
-        <p class="p91">Hossam</p>
-        <p class="job91">FULL STUCK DEVELOPMENT</p>
-      </div>
-      <div class="div91">
-        <div class="img9">
-          <img src="images/person3.jpg" alt="Not Found" class="img91">
-          <div class="contact9">
-            <div class="ico1 ico9"> <img src="images/facebook (1).png" alt="Not Found" class="i9"></div>
-            <div class="ico2 ico9"> <img src="images/linkedin.png" alt="Not Found" class="i91"></div>
-            <div class="ico3 ico9"><img src="images/twitter.png" alt="Not Found" class="i92"></div>
-          </div>
-        </div>
-        <p class="p91">Ahmed</p>
-        <p class="job91">MARKETING</p>
-      </div>
-    </div>
-  </div>
-  <!-- ten page -->
-  <div class="ten_page">
-    <p class="h10">Recent News</p>
-    <div class="line3"></div>
-    <div class="parent">
-      <div class="box10 box101">
-
-        <img src="images/people11.jpg" alt="Not Found" class="img10">
-        <div class="text10">
-        <ul>
-          <i class="fa-brands fa-facebook-f ffff link10"></i>
-          <li>Ahmed</li>
-          <i class="fa-brands fa-linkedin-in ffff link10"></i>
-          <li>13Dec</li>
-          <i class="fa-brands fa-twitter ffff link10"></i>
-          <li>75</li>
-        </ul>
-        <p class="p101">Marketing Manager</p>
-        <p class="p102">Skilled in digital marketing strategies. Focuses on</p>
-        <p class="p103">innovative campaigns for brand growth. Loves</p>
-        <p class="p103">sharing the story behind each fragrance.</p>
-        <button class="btn10"><a href="#">Read More</a></button>
-        </div>
-      </div>
-      <div class="box10 box102">
-        <img src="images/people10.jpg" alt="Not Found" class="img10">
-        <div class="text10">
-          <ul>
-            <i class="fa-brands fa-facebook-f ffff link10"></i>
-            <li>Mariam</li>
-            <i class="fa-brands fa-linkedin-in ffff link10"></i>
-            <li>13Dec</li>
-            <i class="fa-brands fa-twitter ffff link10"></i>
-            <li>75</li>
-          </ul>
-          <p class="p101">Coffee Specialist</p>
-          <p class="p102 p104" >Passionate about creating unique fragrances.</p>
-          <p class="p103 p104">innovative campaigns for brand growth. Loves</p>
-          <p class="p103 p104">sharing the story behind each fragrance.</p>
-          <button class="btn10"><a href="#">Read More</a></button>
-        </div>
-      </div>
-      <div class="box10 box103">
-        <img src="images/people12.jpg" alt="Not Found" class="img10">
-        <div class="text10">
-        <ul>
-          <i class="fa-brands fa-facebook-f ffff link10"></i>
-          <li>Mohamed</li>
-          <i class="fa-brands fa-linkedin-in ffff link10"></i>
-          <li>13Dec</li>
-          <i class="fa-brands fa-twitter ffff link10"></i>
-          <li>75</li>
-        </ul>
-        <p class="p101">Sales Consultant</p>
-        <p class="p102">Experienced in customer service for 4 years. Helps</p>
-        <p class="p103">customers find their perfect scent. Known for</p>
-        <p class="p103">creating a welcoming shopping experience.</p>
-        <button class="btn10"><a href="#">Read More</a></button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Footer -->
-   <div class="Footer">
-    <img src="images/footer.jpg" alt="Not Found" class="imgf">
-    <ul>
-      <li>
-       <i class="fa-brands fa-twitter footer-icon comfo"></i> 
-      </li>
-      <li>
-       <i class="fa-brands fa-youtube footer-icon comfo"></i> 
-      </li>
-      <li>
-       <i class="fa-brands fa-linkedin-in footer-icon comfo"></i> 
-      </li>
-      <li>
-       <i class="fa-brands fa-instagram footer-icon comfo"></i> 
-      </li>
-      <li>
-       <i class="fa-brands fa-google-plus-g footer-icon comfo"></i> 
-      </li>
-      <li>
-       <i class="fa-brands fa-facebook-f footer-icon comfo"></i> 
-      </li>
-    </ul>
-    <p class="footerp">
-      © 2021 . all right reserved by colorlib
-    </p>
-   </div>
+  </footer>
 </body>
-
 </html>
